@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Madhav Gohel – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a2e5c9f5c9.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg:#f5f5f5;
+            --text:#222;
+            --accent:#0066cc;
+            --nav-bg:#fff;
+            --nav-text:#222;
+            --card-bg:#fff;
+        }
+        [data-theme="dark"] {
+            --bg:#121212;
+            --text:#e0e0e0;
+            --accent:#4da6ff;
+            --nav-bg:#1f1f1f;
+            --nav-text:#e0e0e0;
+            --card-bg:#1e1e1e;
+        }
+        body{
+            margin:0;
+            font-family:'Roboto',sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            line-height:1.6;
+            scroll-behavior: smooth;
+        }
+        header{
+            background:var(--nav-bg);
+            padding:1rem 2rem;
+            box-shadow:0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top:0;
+            z-index:10;
+        }
+        .container{max-width:1100px;margin:auto;padding:0 1rem;}
+        .logo{
+            font-family:'Montserrat',sans-serif;
+            font-size:1.8rem;
+            font-weight:700;
+            color:var(--accent);
+        }
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:1.5rem;
+        }
+        .nav-links a{
+            text-decoration:none;
+            color:var(--nav-text);
+            font-weight:500;
+            transition:color .3s;
+        }
+        .nav-links a:hover{color:var(--accent);}
+        .section{
+            padding:4rem 0;
+            border-bottom:1px solid rgba(0,0,0,.05);
+        }
+        h2{
+            font-family:'Montserrat',sans-serif;
+            font-size:2rem;
+            margin-bottom:1rem;
+            color:var(--accent);
+            text-align:center;
+        }
+        .grid{
+            display:grid;
+            gap:2rem;
+        }
+        @media(min-width:768px){
+            .grid-2{grid-template-columns:repeat(2,1fr);}
+            .grid-3{grid-template-columns:repeat(3,1fr);}
+        }
+        .card{
+            background:var(--card-bg);
+            padding:1.5rem;
+            border-radius:8px;
+            box-shadow:0 2px 6px rgba(0,0,0,.1);
+            transition:transform .2s;
+        }
+        .card:hover{transform:translateY(-4px);}
+        .contact-links a{
+            margin-right:1rem;
+            color:var(--accent);
+            font-size:1.2rem;
+        }
+        .skill-list{
+            display:flex;
+            flex-wrap:wrap;
+            gap:.5rem;
+        }
+        .skill{
+            background:var(--accent);
+            color:#fff;
+            padding:0.3rem 0.6rem;
+            border-radius:4px;
+            font-size:0.9rem;
+        }
+        .toggle-btn{
+            cursor:pointer;
+            background:none;
+            border:none;
+            font-size:1.2rem;
+            color:var(--accent);
+        }
+        footer{
+            text-align:center;
+            padding:2rem 0;
+            font-size:0.9rem;
+            color:var(--nav-text);
+            background:var(--nav-bg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Madhav Gohel</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="toggle-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I’m a BTech Information Technology student with a strong passion for AI, data science, and full‑stack development. I love building AI‑driven products that make learning and everyday tasks smarter.</p>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>BTech, Information Technology</h3>
+                    <p><strong>Charusat University (CSPIT)</strong> – 2023‑2026</p>
+                    <p>Coursework: Advanced Algorithms, DBMS, AI, OS, Software Engineering, Cloud Computing</p>
+                </div>
+                <div class="card">
+                    <h3>Diploma, Computer Engineering</h3>
+                    <p><strong>Gyanmanjatri Diploma Engineering College (GTU)</strong> – 2020‑2023</p>
+                    <p>Coursework: Data Structures, Mobile Computing, Network Security, Web Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Data Science Intern (Remote)</h3>
+                    <p><strong>Startup – SproutSong, Ahmedabad</strong> – May 2025 – Jun 2025</p>
+                    <ul>
+                        <li>Developed AI‑driven insights and personalized learning‑path algorithms.</li>
+                        <li>Built a FastAPI‑served clustering model for personalized content delivery.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Summer Intern (Remote)</h3>
+                    <p><strong>DSU Infotech, Vadodara</strong> – May 2024 – Jun 2024</p>
+                    <ul>
+                        <li>Engineered web‑scraping pipelines with BeautifulSoup & Selenium.</li>
+                        <li>Integrated data into SQL/NoSQL stores for downstream analytics.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Agentic AI OS (Ongoing)</h3>
+                        <p>Python • Ollama • Vector DB • LLMs • MCP</p>
+                        <ul>
+                            <li>Autonomous AI agents that execute tasks without human intervention.</li>
+                            <li>RAG & one‑time code generation architecture for automation, education, and content creation.</li>
+                        </ul>
+                </div>
+                <div class="card">
+                    <h3>Urban Guide</h3>
+                    <p>Python • Ollama • Vector DB • LLMs</p>
+                    <ul>
+                        <li>AI‑powered city assistant offering multilingual, real‑time city information.</li>
+                        <li>Vector DB for fast retrieval; conversational UI.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>AWS Gen AI Avatar</h3>
+                    <p>Python • Flask • SageMaker • AWS</p>
+                    <ul>
+                        <li>Stable Diffusion‑based avatar generator on SageMaker.</li>
+                        <li>Deployed image‑generation pipelines with cloud‑native tools.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Class Link</h3>
+                    <p>Python • Flask • PostgreSQL • Bootstrap</p>
+                    <ul>
+                        <li>E‑learning platform for private tuitions – video lectures, study material, and admin tools.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Programming / Scripting</h3>
+                    <div class="skill-list">
+                        <span class="skill">Python</span>
+                        <span class="skill">Java (Basics)</span>
+                        <span class="skill">C++</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill">SQL</span>
+                        <span class="skill">PostgreSQL</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">Vector DB</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill">Git / GitHub</span>
+                        <span class="skill">PyTorch</span>
+                        <span class="skill">TensorFlow</span>
+                        <span class="skill">scikit‑learn</span>
+                        <span class="skill">Hugging Face</span>
+                        <span class="skill">LangChain</span>
+                        <span class="skill">Docker</span>
+                        <span class="skill">AWS / GCP / OCI</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill">Adaptability</span>
+                        <span class="skill">Problem‑Solving</span>
+                        <span class="skill">Team Coordination</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="section">
+        <div class="container">
+            <h2>Certifications & Achievements</h2>
+            <ul>
+                <li>GitHub Foundations Certified – May 2025</li>
+                <li>Building LLM Applications with Prompt Engineering – NVIDIA (May 2025)</li>
+                <li>Machine Learning Specialization – Andrew Ng (May 2025)</li>
+                <li>AWS Academy Cloud Developer – March 2025</li>
+                <li>Google Cloud Career Launchpad – Generative AI track (Jan 2025)</li>
+                <li>OCI AI Foundations Associate – Aug 2024</li>
+                <li>NPTEL – Operating System Fundamentals (Elite) – 2024</li>
+                <li>NPTEL – Python for Data Science (Elite+Silver) – 2024</li>
+                <li>Poster Presentation (Urban Guide) – 2022</li>
+                <li>Finalist – SSIP Gujarat Hackathon 2022</li>
+                <li>Co‑ordinator – Odoo x Charusat Hackathon (Mar 2025)</li>
+                <li>Co‑ordinator – AWS Student Community Day (Sep 2024)</li>
+                <li>Co‑ordinator – Smart India Hackathon 2024</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:madhavgohel2@gmail.com">madhavgohel2@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> +91 87348 72958</p>
+            <div class="contact-links">
+                <a href="https://github.com/Madhav-Gohel" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/madhav-gohel" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:madhavgohel2@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Madhav Gohel. All rights reserved.
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links (fallback for older browsers)
+        document.querySelectorAll('.nav-links a').forEach(link=>{
+            link.addEventListener('click',e=>{
+                e.preventDefault();
+                const target=document.querySelector(link.getAttribute('href'));
+                if(target) target.scrollIntoView({behavior:'smooth'});
+            });
+        });
+
+        // Theme toggle
+        const toggleBtn=document.querySelector('.toggle-btn');
+        const root=document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if(savedTheme==='dark') root.setAttribute('data-theme','dark');
+
+        toggleBtn.addEventListener('click',()=>{
+            const isDark = root.getAttribute('data-theme') === 'dark';
+            if(isDark){
+                root.removeAttribute('data-theme');
+                localStorage.setItem('theme','light');
+                toggleBtn.innerHTML='<i class="fas fa-moon"></i>';
+            }else{
+                root.setAttribute('data-theme','dark');
+                localStorage.setItem('theme','dark');
+                toggleBtn.innerHTML='<i class="fas fa-sun"></i>';
+            }
+        });
+
+        // Initialize icon based on saved theme
+        if(root.getAttribute('data-theme')==='dark'){
+            toggleBtn.innerHTML='<i class="fas fa-sun"></i>';
+        }else{
+            toggleBtn.innerHTML='<i class="fas fa-moon"></i>';
+        }
+    </script>
+</body>
+</html>
